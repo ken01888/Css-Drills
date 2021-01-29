@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         div.addEventListener('click', function () {
                 
-            if (div.nextSibling == null) {
+            if (div.id % 2 == 0 && div.nextSibling == null) {
                 console.log('There are no right blocks')
             } else if (div.id % 2 == 0) {
                 document.body.removeChild(div.nextSibling)
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Correct in the Am
             if (div.previousSibling == button) {
                 console.log('There are no left blocks')
-            } else if (div.id % 2 == 1 ) {
+            } else if (div.id % 2 == 1 && div.previousSibling != document.getElementsByTagName(button)  ) {
                 document.body.removeChild(div.previousSibling)
             }
         })
