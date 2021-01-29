@@ -37,38 +37,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 a++
             }
         });
+        
+            div.addEventListener('click', function () {
 
-
-
-
-        div.addEventListener('click', function () {
-                
             if (div.id % 2 == 0 && div.nextSibling == null) {
-                console.log('There are no right blocks')
+                alert('There are no right blocks')
             } else if (div.id % 2 == 0) {
                 document.body.removeChild(div.nextSibling)
             }
-//Correct in the Am
             if (div.previousSibling == button) {
-                console.log('There are no left blocks')
-            } else if (div.id % 2 == 1 && div.previousSibling != document.getElementsByTagName(button)  ) {
+                alert('There are no left blocks')
+            } else if (div.id % 2 == 1 && div.previousSibling != document.getElementsByTagName(button)) {
                 document.body.removeChild(div.previousSibling)
             }
         })
-
-        
-
-
-
-
-
-
-
     })
-
-
-
-
     document.body.appendChild(button)
 })
 
